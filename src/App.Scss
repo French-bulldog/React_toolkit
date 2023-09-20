@@ -147,17 +147,17 @@
                 border-radius: 10px;
 
                 .TodoText {
-                    margin: 0;
+                    margin: 0rem;
                     display: flex;
                     align-items: center;
                     padding: 0rem 0.5rem;
-                    overflow: visible;
+                    overflow: hidden;
                 }
 
                 .trash {
                     background-color: rgba($color: #f33232, $alpha: 1);
                     // margin: 1rem;
-                    margin: 0.5rem 0.5rem 0.5rem 0rem;
+                    margin: 0.5rem 0.5rem 0.5rem 1rem;
                     padding: 10px;
                     border-radius: 10px;
 

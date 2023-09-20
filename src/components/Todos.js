@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import RemoveTodo from './RemoveTodo';
 import EditTodo_start from './EditTodo_start';
+import CompleteTodo from './CompleteTodo';
 
 const Todos = () => {
     // const [todos, setTodos] = useState(useSelector((state) => state.todo.todos));
@@ -19,7 +20,13 @@ const Todos = () => {
                         <>
                             <div className='main' key={item.id}>
                                 <div className='container_1'>
-                                    <p className='TodoText w-100' data-bs-toggle="collapse" data-bs-target={`#collapseExample${item.id}`} aria-expanded="false" aria-controls="collapseExample">{item.text}</p>
+
+                                    {
+                                        item.Check ?
+                                            <s className='TodoText w-100 line-through' data-bs-toggle="collapse" data-bs-target={`#collapseExample${item.id}`} aria-expanded="false" aria-controls="collapseExample">{item.text}</s>
+                                            : <p className='TodoText w-100' data-bs-toggle="collapse" data-bs-target={`#collapseExample${item.id}`} aria-expanded="false" aria-controls="collapseExample">{item.text}</p>
+                                    }
+                                    <CompleteTodo id={item.id} />
                                     <RemoveTodo id={item.id} />
                                     <EditTodo_start id={item.id} text={item.text} />
                                 </div>

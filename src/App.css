@@ -135,6 +135,11 @@
 .App .Todos .main .container_1 .trash:hover {
   transform: scale(1.1);
 }
+.App .Todos .main .container_1 .trash .icon {
+  width: 6vw;
+  height: 2vh;
+  color: white;
+}
 .App .Todos .main .container_1 .edit_start {
   background-color: #32f33c;
   margin: 0.5rem 0.5rem 0.5rem 0rem;
@@ -145,6 +150,22 @@
   transform: scale(1.1);
 }
 .App .Todos .main .container_1 .edit_start .icon {
+  width: 6vw;
+  height: 2vh;
+  color: white;
+}
+.App .Todos .main .container_1 .check {
+  background-color: rgba(255, 239, 15, 0.75);
+  margin: 0.5rem 0.5rem 0.5rem 1rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+.App .Todos .main .container_1 .check:hover {
+  transform: scale(1.1);
+}
+.App .Todos .main .container_1 .check .icon {
+  width: 6vw;
+  height: 2vh;
   color: white;
 }
 .App .Todos .collapse_main {

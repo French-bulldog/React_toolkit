@@ -22,6 +22,7 @@ export const todoSlice = createSlice({
             const todo = {
                 id: nanoid(),
                 text: action.payload,
+                Check: false
             }
             state.todos.push(todo);
         },
@@ -55,12 +56,27 @@ export const todoSlice = createSlice({
             });
             state.todos = updatedTodos;
         },
+        // 完成事項事項
+        completeTodo: (state, action) => {
+            // state.EditStatus = false;
+
+            const updatedTodos = state.todos.map((item) => {
+                if (item.id === action.payload) {
+                    return {
+                        ...item,
+                        Check: !item.Check
+                    };
+                }
+                return item;
+            });
+            state.todos = updatedTodos;
+        },
     }
 });
 
 
 // 丟出每個操作
-export const { addTodo, removeTodo, editTodoStatus, editCancelTodoStatus, editTodo } = todoSlice.actions;
+export const { addTodo, removeTodo, editTodoStatus, editCancelTodoStatus, editTodo, completeTodo } = todoSlice.actions;
 
 // 導出整個Reducer
 export default todoSlice.reducer;

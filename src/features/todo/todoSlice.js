@@ -3,7 +3,13 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 // 初始值
 const initialState = {
-    todos: [{ id: 1, text: 'hello' }],
+    // todos: [{ id: 1, text: 'hello' }],
+    todos: [],
+    EditStatus: false,
+    standByEdit: {
+        id: "",
+        text: "",
+    }
 }
 
 export const todoSlice = createSlice({
@@ -23,13 +29,38 @@ export const todoSlice = createSlice({
         removeTodo: (state, action) => {
             state.todos = state.todos.filter(todo =>
                 todo.id !== action.payload);
-        }
+        },
+        // 編輯模式
+        editTodoStatus: (state, action) => {
+            state.EditStatus = true;
+            state.standByEdit.id = action.payload.id;
+            state.standByEdit.text = action.payload.text;
+        },
+        // 取消編輯模式
+        editCancelTodoStatus: (state, action) => {
+            state.EditStatus = false;
+        },
+        // 編輯事項
+        editTodo: (state, action) => {
+            state.EditStatus = false;
+
+            const updatedTodos = state.todos.map((item) => {
+                if (item.id === state.standByEdit.id) {
+                    return {
+                        ...item,
+                        text: action.payload
+                    };
+                }
+                return item;
+            });
+            state.todos = updatedTodos;
+        },
     }
 });
 
 
 // 丟出每個操作
-export const { addTodo, removeTodo } = todoSlice.actions;
+export const { addTodo, removeTodo, editTodoStatus, editCancelTodoStatus, editTodo } = todoSlice.actions;
 
 // 導出整個Reducer
 export default todoSlice.reducer;

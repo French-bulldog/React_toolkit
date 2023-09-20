@@ -1,38 +1,167 @@
 .App {
+  box-sizing: border-box;
+  margin: 1rem;
+  padding: 0;
+}
+.App .AddTodo {
+  display: flex;
+  justify-content: center;
+}
+.App .AddTodo input {
+  padding: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 10px;
+}
+.App .AddTodo button {
+  padding: 0.4rem;
+  margin-left: 0.5rem;
+  border-radius: 5px;
+}
+.App .AddTodo .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .AddTodo .glow-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.App .AddTodo .glow-button::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  opacity: 0;
+}
+.App .AddTodo .glow-button:hover::after {
+  animation: pulse 1.5s linear infinite;
+}
+.App .AddTodo .glow-button:active {
+  transform: translateY(4px);
+}
+.App .EditTodo {
+  display: flex;
+  justify-content: center;
+}
+.App .EditTodo input {
+  padding: 0.4rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 10px;
+}
+.App .EditTodo .glow-button {
+  margin-left: 0.1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.App .EditTodo .glow-button::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  opacity: 0;
+}
+.App .EditTodo .glow-button:hover::after {
+  animation: pulse 1.5s linear infinite;
+}
+.App .EditTodo .glow-button:active {
+  transform: translateY(4px);
+}
+.App .EditTodo .XX {
+  display: inline-block;
+}
+.App .EditTodo .XX button {
+  background-color: red;
+}
+.App .Todos {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .Todos .main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.App .Todos .main .container_1 {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  margin-bottom: 1rem;
+  display: flex;
+  border-radius: 10px;
+}
+.App .Todos .main .container_1 .TodoText {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 0rem 0.5rem;
+  overflow: visible;
+}
+.App .Todos .main .container_1 .trash {
+  background-color: #f33232;
+  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+.App .Todos .main .container_1 .trash:hover {
+  transform: scale(1.1);
+}
+.App .Todos .main .container_1 .edit_start {
+  background-color: #32f33c;
+  margin: 0.5rem 0.5rem 0.5rem 0rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+.App .Todos .main .container_1 .edit_start:hover {
+  transform: scale(1.1);
+}
+.App .Todos .main .container_1 .edit_start .icon {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App .Todos .collapse_main {
+  display: flex;
+  justify-content: center;
+}
+.App .Todos .collapse_main .collapse {
+  margin: 0rem 0rem 1rem 0rem;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes pulse {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
   }
-}
+}/*# sourceMappingURL=App.css.map */

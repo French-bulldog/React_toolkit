@@ -17,9 +17,9 @@ const Todos = () => {
                 todos.map((item) => {
                     return (
                         <>
-                            <div className='main' key={item.id} data-bs-toggle="collapse" data-bs-target={`#collapseExample${item.id}`} aria-expanded="false" aria-controls="collapseExample">
+                            <div className='main' key={item.id}>
                                 <div className='container_1'>
-                                    <p className='TodoText me-auto'>{item.text}</p>
+                                    <p className='TodoText w-100' data-bs-toggle="collapse" data-bs-target={`#collapseExample${item.id}`} aria-expanded="false" aria-controls="collapseExample">{item.text}</p>
                                     <RemoveTodo id={item.id} />
                                     <EditTodo_start id={item.id} text={item.text} />
                                 </div>

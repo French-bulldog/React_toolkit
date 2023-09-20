@@ -147,11 +147,15 @@
                 border-radius: 10px;
 
                 .TodoText {
-                    margin: 0rem;
+                    margin: 1rem;
                     display: flex;
                     align-items: center;
                     padding: 0rem 0.5rem;
                     overflow: hidden;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
 
                 .trash {

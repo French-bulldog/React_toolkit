@@ -117,11 +117,14 @@
   border-radius: 10px;
 }
 .App .Todos .main .container_1 .TodoText {
-  margin: 0rem;
+  margin: 1rem;
   display: flex;
   align-items: center;
   padding: 0rem 0.5rem;
   overflow: hidden;
+}
+.App .Todos .main .container_1 .TodoText:hover {
+  cursor: pointer;
 }
 .App .Todos .main .container_1 .trash {
   background-color: #f33232;

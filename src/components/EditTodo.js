@@ -27,12 +27,12 @@ const EditTodo = () => {
     // 編輯內容按鈕
     const editTodoHandler = (e) => {
 
-        if (input != "") {
+        if (input.length > 0) {
             dispatch(editTodo(input));
         }
-        else {
+        // else if (input.length == 0) {
 
-        }
+        // }
     }
 
     // 取消編輯狀態按鈕

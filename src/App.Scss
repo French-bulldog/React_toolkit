@@ -147,11 +147,17 @@
                 border-radius: 10px;
 
                 .TodoText {
+                    width: 70%;
                     margin: 1rem;
                     display: flex;
                     align-items: center;
                     padding: 0rem 0.5rem;
+                    height: 5vh;
+                    // /* 超出部分以省略符號顯示 */
+                    white-space: nowrap;
+                    // /* 禁止換行 */
                     overflow: hidden;
+                    // /* 超出部分隱藏 */
 
                     &:hover {
                         cursor: pointer;
@@ -159,6 +165,7 @@
                 }
 
                 .trash {
+                    // width: 10%;
                     background-color: rgba($color: #f33232, $alpha: 1);
                     // margin: 1rem;
                     margin: 0.5rem 0.5rem 0.5rem 1rem;
@@ -178,6 +185,7 @@
 
                 // 開啟編輯模式
                 .edit_start {
+                    // width: 10%;
                     background-color: rgba($color: #32f33c, $alpha: 1);
                     // margin: 1rem;
                     margin: 0.5rem 0.5rem 0.5rem 0rem;
@@ -197,6 +205,7 @@
 
                 // 完成備忘錄
                 .check {
+                    // width: 10%;
                     background-color: rgba($color: #ffef0f, $alpha: 0.75);
                     // margin: 1rem;
                     margin: 0.5rem 0.5rem 0.5rem 1rem;

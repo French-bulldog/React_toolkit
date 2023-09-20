@@ -23,8 +23,8 @@ const Todos = () => {
 
                                     {
                                         item.Check ?
-                                            <s className='TodoText w-100 line-through' data-bs-toggle="collapse" data-bs-target={`#collapseExample${item.id}`} aria-expanded="false" aria-controls="collapseExample">{item.text}</s>
-                                            : <p className='TodoText w-100' data-bs-toggle="collapse" data-bs-target={`#collapseExample${item.id}`} aria-expanded="false" aria-controls="collapseExample">{item.text}</p>
+                                            <s className='TodoText line-through' data-bs-toggle="collapse" data-bs-target={`#collapseExample${item.id}`} aria-expanded="false" aria-controls="collapseExample">{item.text}</s>
+                                            : <p className='TodoText' data-bs-toggle="collapse" data-bs-target={`#collapseExample${item.id}`} aria-expanded="false" aria-controls="collapseExample">{item.text}</p>
                                     }
                                     <CompleteTodo id={item.id} />
                                     <RemoveTodo id={item.id} />

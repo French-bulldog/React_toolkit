@@ -12,7 +12,7 @@ const RemoveTodo = ({ id }) => {
     }
 
     return (
-        <button className='trash ms-auto' onClick={() => {
+        <button className='trash' onClick={() => {
             RemoveTodoHandler();
         }}>
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="white" className="bi bi-trash icon" viewBox="0 0 16 16">
